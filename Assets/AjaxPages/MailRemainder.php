@@ -41,12 +41,12 @@ if ($result->num_rows > 0) {
         $mail->is();
         $mail->Host = '.gmail.com';
         $mail->Auth = true;
-        $mail->Username = 'infofinanza123@gmail.com';
-        $mail->Password = 'bklz zfka plgn mtpf';
+        $mail->Username = '@gmail.com';
+        $mail->Password = '';
         $mail->Secure = 'ssl';
         $mail->Port = 465;
 
-        $mail->setFrom('infofinanza123@gmail.com', 'Loan Reminder');
+        $mail->setFrom('@gmail.com', 'Loan Reminder');
         $mail->addAddress($email);
 
         $mail->isHTML(true);
