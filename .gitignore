@@ -10,3 +10,6 @@ Assets/Templates/
 Assets/page/*.jpg
 Assets/page/*.png
 Assets/page/*.jpeg
+
+# Ignore the Basics folder
+Basics/
