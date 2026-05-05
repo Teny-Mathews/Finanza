@@ -13,3 +13,5 @@ Assets/page/*.jpeg
 
 # Ignore the Basics folder
 Basics/
+
+Assets/userphoto/*.png
