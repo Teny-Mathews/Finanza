@@ -5,3 +5,8 @@ Assets/Templates/
 *.zip
 *.rar
 .vscode/
+
+# New: Ignore personal photos of friends
+Assets/page/*.jpg
+Assets/page/*.png
+Assets/page/*.jpeg
