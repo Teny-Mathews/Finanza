@@ -1,0 +1,7 @@
+# Ignore everything that makes the project heavy
+Assets/phpMail/
+Assets/Templates/
+*.sql
+*.zip
+*.rar
+.vscode/
