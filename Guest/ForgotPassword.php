@@ -6,7 +6,7 @@ use PHPMailer\PHPMailer\Exception;
 
 require '../Assets/phpMail/src/Exception.php';
 require '../Assets/phpMail/src/PHPMailer.php';
-require '../Assets/phpMail/src/SMTP.php';
+require '../Assets/phpMail/src/.php';
 
 function generateOTP($length = 6) {
     $digits = '0123456789';
@@ -20,12 +20,12 @@ function generateOTP($length = 6) {
 function otpEmail($email,$otp){
     $mail = new PHPMailer(true);
 
-    $mail->isSMTP();
-    $mail->Host = 'smtp.gmail.com';
-    $mail->SMTPAuth = true;
+    $mail->is();
+    $mail->Host = '.gmail.com';
+    $mail->Auth = true;
     $mail->Username = 'infofinanza123@gmail.com'; // Your gmail
     $mail->Password = 'bklz zfka plgn mtpf'; // Your gmail app password
-    $mail->SMTPSecure = 'ssl';
+    $mail->Secure = 'ssl';
     $mail->Port = 465;
   
     $mail->setFrom('infofinanza123@gmail.com'); // Your gmail

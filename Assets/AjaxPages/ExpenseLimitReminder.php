@@ -8,7 +8,7 @@ use PHPMailer\PHPMailer\Exception;
 
 require '../phpMail/src/Exception.php';
 require '../phpMail/src/PHPMailer.php';
-require '../phpMail/src/SMTP.php';
+require '../phpMail/src/.php';
 
 // Today's date
 $today = date('Y-m-d');
@@ -69,12 +69,12 @@ if ($userResult->num_rows > 0) {
 
         try {
 
-            $mail->isSMTP();
-            $mail->Host = 'smtp.gmail.com';
-            $mail->SMTPAuth = true;
+            $mail->is();
+            $mail->Host = '.gmail.com';
+            $mail->Auth = true;
             $mail->Username = 'infofinanza123@gmail.com';
             $mail->Password = 'ginu ynbj ngfa glyy';
-            $mail->SMTPSecure = 'ssl';
+            $mail->Secure = 'ssl';
             $mail->Port = 465;
 
             $mail->setFrom('infofinanza123@gmail.com', 'Finanza - Expense Alert');

@@ -5,16 +5,16 @@ include("Head.php");
 $admin_name="";
 $admin_id="";
 $admin_email="";
-$admin_password="";
+$admin_="";
 if(isset($_POST["btn_submit"]))
 {
 $name=$_POST["txt_name"];
 $email=$_POST["txt_email"];
-$password=$_POST["txt_password"];
+$=$_POST["txt_"];
 $hid=$_POST["txt_hid"];
 if($hid=="")
 {
-$insqry="insert into tbl_admin (admin_name,admin_email,admin_password) values('".$name."','".$email."','".$password."')";
+$insqry="insert into tbl_admin (admin_name,admin_email,admin_) values('".$name."','".$email."','".$."')";
 if($con->query($insqry))
 {
 	?>
@@ -27,7 +27,7 @@ if($con->query($insqry))
 }
 else 
   { 
-     $upqry="update tbl_admin set admin_name='".$name."',admin_email='".$email."',admin_password='".$password."' where admin_id='".$hid."'";
+     $upqry="update tbl_admin set admin_name='".$name."',admin_email='".$email."',admin_='".$."' where admin_id='".$hid."'";
 	if($con->query($upqry))
 	{
 		?>
@@ -62,7 +62,7 @@ if(isset($_GET["did"]))
 	$admin_name=$data['admin_name'];
 	$admin_id=$data['admin_id'];
 	$admin_email=$data['admin_email'];
-	$admin_password=$data['admin_password'];
+	$admin_=$data['admin_'];
 }
 	
 		?>
@@ -93,9 +93,9 @@ if(isset($_GET["did"]))
       <input required type="text" name="txt_email" id="txt_email" value="<?php echo $admin_email ?>"/></td>
     </tr>
     <tr>
-      <td>Password</td>
-      <td><label for="txt_password"></label>
-      <input required type="text" name="txt_password" id="txt_password" value="<?php echo $admin_password ?>"/></td>
+      <td></td>
+      <td><label for="txt_"></label>
+      <input required type="text" name="txt_" id="txt_" value="<?php echo $admin_ ?>"/></td>
     </tr>
     <tr>
       <td colspan="2" align="center"><input type="submit" name="btn_submit" id="btn_submit" value="Submit" /></td>
@@ -106,7 +106,7 @@ if(isset($_GET["did"]))
       <td>Slno</td>
       <td>Name</td>
       <td>Email</td>
-      <td>Password</td>
+      <td></td>
       <td>Action</td>
     </tr>
      <?php
@@ -121,7 +121,7 @@ if(isset($_GET["did"]))
       <td><?php echo $i ?></td>
       <td><?php echo $data ["admin_name"] ?> </td>
       <td><?php echo $data ["admin_email"] ?> </td>
-      <td><?php echo $data ["admin_password"] ?> </td>
+      <td><?php echo $data ["admin_"] ?> </td>
            <td><a href="AdminReg.php?did=<?php echo $data["admin_id"]?>"> delete</a>
            <a href="AdminReg.php?eid=<?php echo $data["admin_id"]?>"> edit</a> </td>
     </tr>

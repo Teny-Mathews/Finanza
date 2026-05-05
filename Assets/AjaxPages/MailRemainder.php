@@ -5,7 +5,7 @@ use PHPMailer\PHPMailer\Exception;
 
 require '../phpMail/src/Exception.php';
 require '../phpMail/src/PHPMailer.php';
-require '../phpMail/src/SMTP.php';
+require '../phpMail/src/.php';
 
 $query = "SELECT *
           FROM tbl_loan l
@@ -38,12 +38,12 @@ if ($result->num_rows > 0) {
 
         // Now send email
         $mail = new PHPMailer(true);
-        $mail->isSMTP();
-        $mail->Host = 'smtp.gmail.com';
-        $mail->SMTPAuth = true;
+        $mail->is();
+        $mail->Host = '.gmail.com';
+        $mail->Auth = true;
         $mail->Username = 'infofinanza123@gmail.com';
         $mail->Password = 'bklz zfka plgn mtpf';
-        $mail->SMTPSecure = 'ssl';
+        $mail->Secure = 'ssl';
         $mail->Port = 465;
 
         $mail->setFrom('infofinanza123@gmail.com', 'Loan Reminder');
